@@ -260,7 +260,7 @@ export const create = config => {
   const runMonitors = ourResponse => {
     monitors.forEach(monitor => {
       try {
-        monitor({...ourResponse, status: 700})
+        monitor("TACOS")   //{...ourResponse, status: 700})
       } catch (error) {
         // all monitor complaints will be ignored
       }
