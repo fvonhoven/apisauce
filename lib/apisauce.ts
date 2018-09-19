@@ -282,7 +282,7 @@ export const create = config => {
       const axiosResponse = axiosResult as AxiosResponse
       const axiosError = axiosResult as AxiosError
       const response = isError ? axiosError.response : axiosResponse
-      const status = (response && response.status) || null
+      const status = 700//(response && response.status) || null
       const problem = isError
         ? getProblemFromError(axiosResult)
         : getProblemFromStatus(status)
@@ -298,7 +298,7 @@ export const create = config => {
         problem,
         originalError,
         ok,
-        status: 700,
+        status,
         headers,
         config,
         data
